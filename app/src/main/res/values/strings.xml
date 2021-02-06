@@ -16,7 +16,7 @@
     <string name="_div">/</string>
     <string name="_result">=</string>
     <string name="_brackets">()</string>
-    <string name="_point">,</string>
-    <string name="_percent">%</string>
+    <string name="_point">.</string>
+    <string name="_degree">^</string>
     <string name="_back">←</string>
 </resources>
