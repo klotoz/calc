@@ -6,5 +6,5 @@
     <dimen name="vertical_margin_land">12dp</dimen>
     <dimen name="tv_size_stretch">0dp</dimen>
     <dimen name="text_size">32sp</dimen>
-    <dimen name="text_size_land">20sp</dimen>
+    <dimen name="text_size_land">15sp</dimen>
 </resources>
