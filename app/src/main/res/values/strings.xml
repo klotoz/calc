@@ -16,7 +16,13 @@
     <string name="_div">/</string>
     <string name="_result">=</string>
     <string name="_brackets">()</string>
-    <string name="_point">,</string>
-    <string name="_percent">%</string>
+    <string name="_point">.</string>
+    <string name="_degree">^</string>
     <string name="_back">←</string>
+    <string name="_clear">C</string>
+    <string name="_sqrt">√</string>
+    <string name="_sin">sin</string>
+    <string name="_cos">cos</string>
+    <string name="_tan">tan</string>
+    <string name="_settings">⚙</string>
 </resources>
