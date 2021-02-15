@@ -3,6 +3,7 @@ package com.example.calc;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonMinus;
     private Button buttonPoint;
     private Button buttonResult;
+    private Button btnSettings;
+    private Button btnClear;
     private int count = 0;
     private MemResult memResult;
     private final static String KEY_RES = "key_res";
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
@@ -90,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
         buttonBrackets.setOnClickListener(btnBracketsListener);
         buttonResult = findViewById(R.id.btn_result);
         buttonResult.setOnClickListener(btnResultListener);
+        btnSettings = findViewById(R.id.btn_settings);
+        btnSettings.setOnClickListener(btnSetListener);
+        btnClear = findViewById(R.id.btn_clear);
+        btnClear.setOnClickListener(btnClearListener);
     }
 
     public View.OnClickListener btnListener = new View.OnClickListener() {
@@ -98,6 +106,14 @@ public class MainActivity extends AppCompatActivity {
             Button button = (Button) v;
             String buttonText = button.getText().toString();
             setTextMemory(tvResult, buttonText);
+        }
+    };
+
+    public View.OnClickListener btnClearListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            tvResult.setText("");
+            setTextMemory(tvResult, "");
         }
     };
 
@@ -155,6 +171,15 @@ public class MainActivity extends AppCompatActivity {
         memResult = (MemResult) instanceState.getSerializable(KEY_RES);
         setTextMemory(tvResult, memResult.getMemResult());
     }
+
+
+    public View.OnClickListener btnSetListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent runSettings = new Intent(MainActivity.this, MainActivitySecond.class);
+            startActivity(runSettings);
+        }
+    };
 
 
 }

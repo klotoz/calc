@@ -25,4 +25,8 @@
     <string name="_cos">cos</string>
     <string name="_tan">tan</string>
     <string name="_settings">⚙</string>
+    <string name="_setDarkTheme">Включить темную тему</string>
+    <string name="_setLightTheme">Включить светлую тему</string>
+    <string name="_btnBack">Назад</string>
+
 </resources>
